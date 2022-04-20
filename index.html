@@ -154,7 +154,7 @@
             input = document.getElementById("user_input").value;
             document.getElementById("PL1").style.color = "blue;"
             document.getElementById("user_input").value = "";
-
+            var numbers = /^[0-9]+$/;
             if (Y == true) {
 
                 document.getElementById("PL1").innerHTML = P2 + "  turn ";
@@ -243,11 +243,15 @@
                     c9.innerHTML = "O";
                     Y = true;
                 }
+                else if(input!=numbers) {
+                    alert("check:" +"\n" + " 1.entered integers only from 1-9"+"\n"+ " 2.already entered value ");
+                   
 
-                else {
-                    alert("already entered ,choose other cell");
-                    Y = false;
+
                 }
+               
+               
+                
 
             }
             if ((c1.innerHTML == 'X' && c2.innerHTML == 'X' && c3.innerHTML == 'X') || (c1.innerHTML == 'O' && c2.innerHTML == 'O' && c3.innerHTML == 'O')) {
